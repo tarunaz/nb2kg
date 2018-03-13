@@ -49,9 +49,8 @@ def load_connection_args(**kwargs):
     kwargs['connect_timeout'] = kwargs.get('connect_timeout', KG_CONNECT_TIMEOUT)
     kwargs['request_timeout'] = kwargs.get('request_timeout', KG_REQUEST_TIMEOUT)
     kwargs['headers'] = kwargs.get('headers', KG_HEADERS)
-    kwargs['validate_cert'] = kwargs.get('validate_cert', VALIDATE_KG_CERT)
-    kwargs['auth_username'] = kwargs.get('auth_username', KG_HTTP_USER)
-    kwargs['auth_password'] = kwargs.get('auth_password', KG_HTTP_PASS)
+    kwargs['validate_cert'] = None #kwargs.get('auth_username', KG_HTTP_USER)
+    kwargs['auth_password'] = None #kwargs.get('auth_password', KG_HTTP_PASS)
     return kwargs
 
 @gen.coroutine
